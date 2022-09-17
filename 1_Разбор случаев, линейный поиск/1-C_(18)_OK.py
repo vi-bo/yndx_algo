@@ -20,7 +20,6 @@ print((1000 / 89) * 89 - 1000)
 
 n_days = int(input_days)
 prices = list(map(int, input_prices.split()))
-#print('prices', prices)
 
 # Рассчитаем все для первого дня
 
@@ -64,23 +63,12 @@ my_find_days(n_days, prices)
 #     ans = (0, 0)
 #
 #     for i in range(1, n_days):
-#         # print('i =', i, 'price =', prices[i])
-#         # print('=======Перед первым if=========')
-#         # print('Тeкущий profit', profit)
-#         # print('Считаем Profit', value_gas * prices[i] - money)
 #         if value_gas * prices[i] - money > profit:
 #             profit = value_gas * prices[i] - money
-#             # print('!!!Новый Profit', profit)
 #             ans = (index_day_min_price + 1, i + 1)
-#             # print('ans', ans)
-#         # print('=========Перед вторым if==========')
-#         # print('Текущий value_gas', value_gas)
-#         # print('Считаем value_gas', money / prices[i])
 #         if money / prices[i] > value_gas:
 #             index_day_min_price = i
-#             # print('index_day_min_price', index_day_min_price)
 #             value_gas = 1 / prices[i]
-#             # print('Новый value_gas', value_gas)
 #
 #     return ans
 
