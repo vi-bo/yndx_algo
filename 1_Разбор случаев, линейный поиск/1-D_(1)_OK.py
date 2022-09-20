@@ -2,7 +2,8 @@
 # # D. Разница во времени
 
 '''
-Каждые сутки на вокзал прибывает n электричек. По заданному расписанию прибытия электричек определите минимальное время между прибытием двух разных электричек.
+Каждые сутки на вокзал прибывает n электричек. По заданному расписанию прибытия электричек определите
+минимальное время между прибытием двух разных электричек.
 '''
 
 # n = int(input())
@@ -47,6 +48,8 @@ else:
     pass
 
 '''
+# работа с datetime не пригодилась
+
 date_time_str = '07:40'
 date_time_obj = datetime.datetime.strptime(date_time_str, '%H:%M')
 print('Время:', date_time_obj.time())
@@ -59,11 +62,8 @@ print(time_interval)
 
 #arrival = [datetime.datetime.strptime(time, '%H:%M') for time in arrival]
 
-# for i in range(n):
-#     print(arrival[i].time())
 '''
 
-'''
 # Разбор домашнего задания
 
 n = int(input())
@@ -74,8 +74,7 @@ for nowTime in timePoints:
     h, m = map(int, nowTime.split(':'))
     minutePoints.append(h * 60 + m)
 minutePoints.sort()
-minDist = 1440 + minutePoints[0] - minutePoints[-1]
+minDist = 24 * 60 + minutePoints[0] - minutePoints[-1]
 for i in range(1, len(minutePoints)):
     minDist = min(minDist, minutePoints[i] - minutePoints[i - 1])
 print(minDist)
-'''
